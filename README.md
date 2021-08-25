@@ -7,9 +7,9 @@ Have fun!
 -->
 
 <p align="center">
-  <h3 align="center">BERT Q&A</h3> <!-- EDIT -->
+  <h3 align="center">React 2D</h3> <!-- EDIT -->
   <p align="center">
-    React 2D <!-- EDIT -->
+    React 2D game is a 2D game built in React<!-- EDIT -->
   </p>
   <!-- EDIT: Head over to https://shields.io/ to generate some beautiful shields! -->
 </p>
