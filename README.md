@@ -9,7 +9,7 @@ Have fun!
 <p align="center">
   <h3 align="center">BERT Q&A</h3> <!-- EDIT -->
   <p align="center">
-    BERT Q&A is a webapp built with React, Node.js, Tensorflow.js, and BERT that enables users to recieve an answer based on the content of a given passage. <!-- EDIT -->
+    React 2D <!-- EDIT -->
   </p>
   <!-- EDIT: Head over to https://shields.io/ to generate some beautiful shields! -->
 </p>
