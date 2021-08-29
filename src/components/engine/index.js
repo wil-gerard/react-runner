@@ -179,7 +179,7 @@ export default function Engine() {
   }
 
   useEvent('keyup', handleKeyPress);
-  initSpeechRecognizer(handleSpeechInput);
+  initSpeechRecognizer(handleSpeechInput); // initializes imported speechCommand.js
 
   useEffect(() => {
     if (start) {

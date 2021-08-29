@@ -55,7 +55,7 @@ const checkPredictions = (
     // Highlight the top word.
     const topWord = wordsAndProbs[0][0];
     
-    if (topWord === 'up') {
+    if (topWord === 'up') { // if Tensorflow hears 'up' call callback which === handleSpeechInput
         if (callback !== null) callback();
         console.log('up');
     }
