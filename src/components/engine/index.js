@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
-import { useEvent } from '../../hooks';
+import { useEvent, useSpeech } from '../../hooks';
+import { initSpeechRecognizer } from '../../speechCommand';
 
 const BLOCKS = [
   140,
@@ -165,7 +166,20 @@ export default function Engine() {
     }
   };
 
+  const handleSpeechInput = () => {
+    if (!started && !start) {
+      setStart(true);
+    }
+
+    // if the game has not been initialized return
+    if (engine === null) return;
+
+    // otherwise jump
+    engine.jump();
+  }
+
   useEvent('keyup', handleKeyPress);
+  initSpeechRecognizer(handleSpeechInput);
 
   useEffect(() => {
     if (start) {
@@ -182,14 +196,14 @@ export default function Engine() {
 
     if (gameState.status === 'fail' && started) {
       setStarted(false);
-      alert('DAN IS STUPID');
+      alert('WIL DUMB');
       setGameState(initialState);
       setStart(true);
     }
 
     if (gameState.status === 'win' && started) {
       setStarted(false);
-      alert('TURKEY IS GOOD');
+      alert('TURKEY GOOD');
       setGameState(initialState);
       setStart(true);
     }
