@@ -38,7 +38,7 @@ The absolute coolest readme template around! <!-- EDIT -->
 
 <!-- EDIT -->
 - Frontend
-  - HTML, CSS, React, Material UI
+  - HTML, SCSS, React, Material UI
 - Backend
   - Node.js, Tensorflow.js
 - Tests
