@@ -8,20 +8,22 @@ import Modal from '../GameDialog'
 
 
 
-const BLOCKS = [];
+const BLOCKS = [500, 1000, 1500];
 
 let difficultyAccumulator = 0;
 
-for (let i = 0; i < 100; i++) {
-  difficultyAccumulator += 500;
-  BLOCKS.push(difficultyAccumulator);
-}
+// for (let i = 0; i < 100; i++) {
+//   difficultyAccumulator += 500;
+//   BLOCKS.push(difficultyAccumulator);
+//   console.log("block pushed");
+// }
 
 const charWidth = 100;
 const charHeight = 100;
 
 const blockWidth = 80;
 const blockHeight = 200;
+const blockSpacing = 500;
 
 // this is in comparison to the rest of the game
 // 2 is twice the speed
@@ -47,8 +49,15 @@ function CreateEngine(setState) {
     const charYPos = this.position;
 
     // if the char has past all blocks
-    if (charXPos > this.blocks[this.blocks.length - 1] + 200 && this.position <= 0) {
-      this.game = 'win';
+    // if (charXPos > this.blocks[this.blocks.length - 1] + 200 && this.position <= 0) {
+    //   this.game = 'win';
+    // }
+
+    //if a block has moved past the screen, remove and replace it
+    if (this.blocks[0] + blockWidth < this.stage) {
+      this.blocks.shift();
+      this.blocks.push( this.blocks[this.blocks.length - 1] + blockSpacing * this.settings.tile);
+      this.score += 1;
     }
 
     this.blocks.forEach((block) => {
@@ -104,6 +113,7 @@ function CreateEngine(setState) {
 
     // set state for use in the component
     setState({
+      score: this.score,
       stage: this.stage,
       jump: this.position,
       blocks: this.blocks,
@@ -139,6 +149,7 @@ function CreateEngine(setState) {
 
 
 const initialState = {
+  score: 0,
   stage: 0,
   jump: 0,
   blocks: [],
@@ -222,6 +233,7 @@ export default function Engine() {
     <div
       className={styles.container}
     >
+      <span>{gameState.score}</span>
       <div
         className={styles.stage}
         style={{
