@@ -8,8 +8,8 @@ async function initSpeechRecognizer (cb) {
     await recognizer.ensureModelLoaded();
 
     callback = cb;
-    console.log('Using tensorflow backend:', tf.getBackend());
-    console.log(recognizer.wordLabels());
+    //console.log('Using tensorflow backend:', tf.getBackend());
+    //console.log(recognizer.wordLabels());
 
     //startGame(); //here
 };
