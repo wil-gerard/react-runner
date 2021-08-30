@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
 import { useEvent, useSpeech } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
+import Modal from '../GameDialog'
 
 
 
@@ -14,7 +15,6 @@ let difficultyAccumulator = 0;
 for (let i = 0; i < 100; i++) {
   difficultyAccumulator += 500;
   BLOCKS.push(difficultyAccumulator);
-  console.log("block pushed");
 }
 
 const charWidth = 100;
@@ -34,7 +34,6 @@ function CreateEngine(setState) {
   };
 
   // current stage position
-  this.score = 0;
   this.game = 'start';
   this.stage = 0;
   this.jump = false;
@@ -214,10 +213,11 @@ export default function Engine() {
       setStarted(false);
       alert('TURKEY GOOD');
       setGameState(initialState);
-      setStart(true);
+      setStart(true);   
     }
   });
 
+  console.log()
   return (
     <div
       className={styles.container}
