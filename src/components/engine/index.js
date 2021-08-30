@@ -3,11 +3,19 @@ import styles from './engine.module.scss';
 import { useEvent, useSpeech } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
 
-const BLOCKS = [
-  140,
-  250,
-  390,
-];
+
+
+
+
+const BLOCKS = [];
+
+let difficultyAccumulator = 0;
+
+for (let i = 0; i < 100; i++) {
+  difficultyAccumulator += 500;
+  BLOCKS.push(difficultyAccumulator);
+  console.log("block pushed");
+}
 
 const charWidth = 100;
 const charHeight = 100;
@@ -22,16 +30,17 @@ const JUMP_VELOCITY = 1.4;
 
 function CreateEngine(setState) {
   this.settings = {
-    tile: 10, // width of one tile
+    tile: 5, // width of one tile
   };
 
   // current stage position
+  this.score = 0;
   this.game = 'start';
   this.stage = 0;
   this.jump = false;
   this.direction = 'up';
   this.position = 0;
-  this.max = this.settings.tile * 40;
+  this.max = this.settings.tile * 120; // max jump height
   this.blocks = BLOCKS.map(b => (b * this.settings.tile));
 
   const checkBlocks = () => {
