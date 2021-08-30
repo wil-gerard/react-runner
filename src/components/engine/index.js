@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
 import { useEvent, useSpeech } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
-import Modal from '../GameDialog'
-
-
-
 
 
 const BLOCKS = [500, 1000, 1500];
@@ -36,6 +32,7 @@ function CreateEngine(setState) {
   };
 
   // current stage position
+  this.score = 0;
   this.game = 'start';
   this.stage = 0;
   this.jump = false;
@@ -43,6 +40,7 @@ function CreateEngine(setState) {
   this.position = 0;
   this.max = this.settings.tile * 120; // max jump height
   this.blocks = BLOCKS.map(b => (b * this.settings.tile));
+  this.isOpen = false;
 
   const checkBlocks = () => {
     const charXPos = this.stage + 200;
@@ -56,8 +54,9 @@ function CreateEngine(setState) {
     //if a block has moved past the screen, remove and replace it
     if (this.blocks[0] + blockWidth < this.stage) {
       this.blocks.shift();
-      this.blocks.push( this.blocks[this.blocks.length - 1] + blockSpacing * this.settings.tile);
+      this.blocks.push(this.blocks[this.blocks.length - 1] + blockSpacing * this.settings.tile);
       this.score += 1;
+      console.log(this.score)
     }
 
     this.blocks.forEach((block) => {
@@ -224,11 +223,11 @@ export default function Engine() {
       setStarted(false);
       alert('TURKEY GOOD');
       setGameState(initialState);
-      setStart(true);   
+      setStart(true);
     }
   });
 
-  console.log()
+  
   return (
     <div
       className={styles.container}
