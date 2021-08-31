@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Engine from './components/Engine';
-import Modal from './components/Modal';
+import Engine from './components/engine';
+import Modal from './components/modal';
 
 export default function App() {
     return (

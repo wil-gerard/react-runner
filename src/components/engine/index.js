@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
 import { useEvent, useSpeech } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
-import Modal from '../../components/Modal';
+import Modal from '../modal';
 
 
 const BLOCKS = [500, 1000, 1500];
