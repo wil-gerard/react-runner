@@ -7,14 +7,6 @@ import Modal from '../modal';
 
 const BLOCKS = [500, 1000, 1500];
 
-let difficultyAccumulator = 0;
-
-// for (let i = 0; i < 100; i++) {
-//   difficultyAccumulator += 500;
-//   BLOCKS.push(difficultyAccumulator);
-//   console.log("block pushed");
-// }
-
 const charWidth = 100;
 const charHeight = 100;
 
