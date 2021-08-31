@@ -9,9 +9,10 @@ const BLOCKS = [500, 1000, 1500];
 
 const charWidth = 100;
 const charHeight = 100;
+const charOffset = 150;
 
 const blockWidth = 80;
-const blockHeight = 200;
+const blockHeight = 150;
 const blockSpacing = 500;
 
 // this is in comparison to the rest of the game
@@ -31,12 +32,12 @@ function CreateEngine(setState) {
   this.jump = false;
   this.direction = 'up';
   this.position = 0;
-  this.max = this.settings.tile * 120; // max jump height
+  this.max = this.settings.tile * 100; // max jump height
   this.blocks = BLOCKS.map(b => (b * this.settings.tile));
   this.isOpen = false;
 
   const checkBlocks = () => {
-    const charXPos = this.stage + 200;
+    const charXPos = this.stage + charOffset;
     const charYPos = this.position;
 
     //if a block has moved past the screen, remove and replace it
@@ -237,7 +238,7 @@ export default function Engine() {
           <span
             className={styles.character}
             style={{
-              transform: `translate(${gameState.stage + 200}px, -${gameState.jump}px)`, // move char in opposite direction
+              transform: `translate(${gameState.stage + charOffset}px, -${gameState.jump}px)`, // move char in opposite direction
               height: charHeight,
               width: charWidth,
             }}
