@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
 import { useEvent, useSpeech } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
+import Modal from '../../components/Modal';
 
 
 const BLOCKS = [500, 1000, 1500];
@@ -168,12 +169,16 @@ export default function Engine() {
   // instance of game engine
   const [engine, setEngine] = useState(null);
 
+  // modal state
+  const [isOpen, setIsOpen] = useState(true)
+
   const handleKeyPress = (e) => {
     // the ' ' char actually represents the space bar key.
     if (e.key === ' ') {
       // start the game when the user first presses the spacebar
-      if (!started && !start) {
+      if (!started && !start && isOpen === true) {
         setStart(true);
+        setIsOpen(false);
       }
 
       // if the game has not been initialized return
@@ -185,8 +190,9 @@ export default function Engine() {
   };
 
   const handleSpeechInput = () => {
-    if (!started && !start) {
+    if (!started && !start && isOpen === true) {
       setStart(true);
+      setIsOpen(false);
     }
 
     // if the game has not been initialized return
@@ -212,26 +218,26 @@ export default function Engine() {
       );
     }
 
+
+
     if (gameState.status === 'fail' && started) {
       setStarted(false);
-      alert('WIL DUMB');
-      setGameState(initialState);
-      setStart(true);
+      setStart(false);
+      setIsOpen(true);
     }
-
-    if (gameState.status === 'win' && started) {
-      setStarted(false);
-      alert('TURKEY GOOD');
-      setGameState(initialState);
-      setStart(true);
-    }
+    
   });
 
-  
+
   return (
+
     <div
       className={styles.container}
     >
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        {`${gameState.score}` > 0 ? `Your score is ${gameState.score}. Press space or say 'UP' to try again!` : "Press space or say 'UP' to start the game"}
+
+          </Modal>
       <span>{gameState.score}</span>
       <div
         className={styles.stage}

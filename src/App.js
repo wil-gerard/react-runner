@@ -3,13 +3,12 @@ import Engine from './components/Engine';
 import Modal from './components/Modal';
 
 export default function App() {
-    const [isOpen, setIsOpen] = useState(true)
     return (
-        <div className="app">
+        <div>
             <Engine />
-            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+            {/* <Modal open={isOpen} onClose={() => setIsOpen(false)}>
                 Fancy Modal
-            </Modal>
+            </Modal> */}
         </div>
     )
 }
