@@ -39,11 +39,6 @@ function CreateEngine(setState) {
     const charXPos = this.stage + 200;
     const charYPos = this.position;
 
-    // if the char has past all blocks
-    // if (charXPos > this.blocks[this.blocks.length - 1] + 200 && this.position <= 0) {
-    //   this.game = 'win';
-    // }
-
     //if a block has moved past the screen, remove and replace it
     if (this.blocks[0] + blockWidth < this.stage) {
       this.blocks.shift();
@@ -222,44 +217,47 @@ export default function Engine() {
 
 
   return (
-
-    <div
-      className={styles.container}
+    <div 
+      className={styles.wrapper}
     >
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        {`${gameState.score}` > 0 ? `Your score is ${gameState.score}. Press space or say 'UP' to try again!` : "Press space or say 'UP' to start the game"}
-
-          </Modal>
-      <span>{gameState.score}</span>
       <div
-        className={styles.stage}
-        style={{
-          transform: `translate(-${gameState.stage}px, 0px)`, // move stage
-        }}
+        className={styles.container}
       >
-        <span
-          className={styles.character}
+        <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+          {`${gameState.score}` > 0 ? `Your score is ${gameState.score}. Press space or say 'UP' to try again!` : "Press space or say 'UP' to start the game"}
+
+            </Modal>
+        <span>{gameState.score}</span>
+        <div
+          className={styles.stage}
           style={{
-            transform: `translate(${gameState.stage + 200}px, -${gameState.jump}px)`, // move char in opposite direction
-            height: charHeight,
-            width: charWidth,
+            transform: `translate(-${gameState.stage}px, 0px)`, // move stage
           }}
-        />
-        {
-          gameState.blocks.map(
-            block => (
-              <span
-                className={styles.block}
-                key={block}
-                style={{
-                  transform: `translate(${block}px, 0px)`, // move stage
-                  height: blockHeight,
-                  width: blockWidth,
-                }}
-              />
-            ),
-          )
-        }
+        >
+          <span
+            className={styles.character}
+            style={{
+              transform: `translate(${gameState.stage + 200}px, -${gameState.jump}px)`, // move char in opposite direction
+              height: charHeight,
+              width: charWidth,
+            }}
+          />
+          {
+            gameState.blocks.map(
+              block => (
+                <span
+                  className={styles.block}
+                  key={block}
+                  style={{
+                    transform: `translate(${block}px, 0px)`, // move stage
+                    height: blockHeight,
+                    width: blockWidth,
+                  }}
+                />
+              ),
+            )
+          }
+        </div>
       </div>
     </div>
   );
