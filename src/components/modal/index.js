@@ -1,5 +1,5 @@
 import React from 'react';
-import  styles  from './modal.module.scss';
+import styles from './modal.module.scss';
 
 export default function Modal({ open, children }) {
     if (!open) return null

@@ -1,11 +1,18 @@
+@import "src/../../../globals.module.scss";
+
 .modal {
+    font-size: $font-size1;
+    font-weight: 600;
+    color: $black;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FFF;
+    background-color: $light-blue;
     padding: 50px;
     z-index: 1000;
+    border: 0;
+    border-radius: $border-sizing;
 }
 
 .overlay {

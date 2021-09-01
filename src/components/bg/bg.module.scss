@@ -1,0 +1,15 @@
+@import "src/../../../globals.module.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 2px solid #f2f2f2;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: $font-size2;
+    margin: 10vh, 5vw;
+}
