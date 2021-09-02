@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
-import { useEvent, useSpeech } from '../../hooks';
+import { useEvent } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
 import Modal from '../modal';
 
@@ -223,7 +223,7 @@ export default function Engine() {
     }
 
     
-  });
+  }, [start, gameState.status, gameState.score, started]);
 
 
   return (

@@ -1,4 +1,5 @@
-import * as tf from '@tensorflow/tfjs';
+
+import * as tf from '@tensorflow/tfjs'; // eslint-disable-line
 import * as speechCommands from '@tensorflow-models/speech-commands';
 
 const recognizer = speechCommands.create('BROWSER_FFT', 'directional4w');
@@ -8,14 +9,9 @@ async function initSpeechRecognizer (cb) {
     await recognizer.ensureModelLoaded();
 
     callback = cb;
-    //console.log('Using tensorflow backend:', tf.getBackend());
-    //console.log(recognizer.wordLabels());
-
-    //startGame(); //here
 };
 
 const suppressionTimeMillis = 1000;
-const allowedCommands = ['up'];
 
 recognizer
   .listen(
