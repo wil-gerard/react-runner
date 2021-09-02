@@ -21,6 +21,11 @@ The developers:
 * [William Gerard](https://github.com/wil-gerard)
 * [Dan Anderson](https://github.com/DanCAnderson)
 
+## Features
+
+- Users can control the character using voice commands
+- A local highscore system
+
 ### Built With
 
 - React.js
@@ -28,50 +33,29 @@ The developers:
 - Tensorflow.js
 - SCSS
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
 ### Prerequisites
 
-<!-- EDIT -->
-`Cool framework here` installed on your local machine.
+- VS Code or any similar IDE supporting JavaScript ES6
+- Node.js 14 or higher
+- NPM 7 or higher
 
 ### Installation
 
 #### 1. Clone the repo
 
-```sh
-git clone https://github.com/EDIT
-cd EDIT
-```
+git clone https://github.com/wil-gerard/react-runner.git
 
 #### 2. Install dependencies
 
-```sh
-EDIT
-```
-
-## Usage
+yarn install
 
 ### Run App
 
-```sh
-EDIT
-```
+yarn start
 
 ### Preview
 
-You can check out a live preview at: EDIT
+You can check out a live preview at: [react-runner.netlify.app/](react-runner.netlify.app/)
 
-### Run Tests
-
-```sh
-EDIT
-```
 
 
