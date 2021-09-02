@@ -49,11 +49,25 @@
   border: 0;
 }
 
-.score {
+.scoreboard {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 3vh;
+  padding: 20px;
+}
+
+.score {
   font-size: $font-size2;
   color: $light-blue;
+}
+
+.highscore {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: $font-size1;
+  color: $light-blue;
+  border: 0;
+  padding: 20px;
 }

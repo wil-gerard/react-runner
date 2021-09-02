@@ -19,6 +19,7 @@ const blockSpacing = 500;
 // 2 is twice the speed
 // 1 is the same speed
 const JUMP_VELOCITY = 1.4;
+let highscore = 0
 
 function CreateEngine(setState) {
   this.settings = {
@@ -212,7 +213,13 @@ export default function Engine() {
       setStarted(false);
       setStart(false);
       setIsOpen(true);
+
+      if (gameState.score > highscore) {
+        highscore = gameState.score
+        console.log(`${highscore} New highscore!`)
+      }   
     }
+
     
   });
 
@@ -226,8 +233,13 @@ export default function Engine() {
       >
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
           {`${gameState.score}` > 0 ? `Your score is ${gameState.score}! Try again? Press space or say 'up'` : "Say 'up' or press space to jump"}
-        </Modal>
-        <span className={styles.score}>{gameState.score}</span>
+        </Modal>  
+        <span className={styles.scoreboard}>
+          <span className={styles.score}>
+            {gameState.score}
+          </span>
+            {`${highscore}` <= 0 ? null : <span className={styles.highscore}> Highscore: {`${highscore}`}</span>} 
+        </span>
         <div
           className={styles.stage}
           style={{
