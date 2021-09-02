@@ -1,15 +1,19 @@
+@import "src/../../../globals.module.scss";
+
 .wrapper {
   height: 50vh;
   width: 80vw;
-  margin: 10vh auto 0 auto;
+  margin: 10vh auto;
 }
 
 .container {
   position: relative;
-  background-color: #568cd2;
+  background-color: $blue;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  border-radius: $border-sizing;
+  border: 0;
 }
 
 .character {
@@ -19,7 +23,9 @@
   width: 100px;
   bottom: 0;
   left: 0;
-  background-color: #ffd600;
+  background-color: $red;
+  border-radius: $border-sizing;
+  border: 0;
 }
 
 .stage {
@@ -38,5 +44,16 @@
   width: 80px;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: $yellow;
+  border-radius: $border-sizing;
+  border: 0;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3vh;
+  font-size: $font-size2;
+  color: $light-blue;
 }

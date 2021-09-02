@@ -7,9 +7,9 @@ Have fun!
 -->
 
 <p align="center">
-  <h3 align="center">React 2D</h3> <!-- EDIT -->
+  <h3 align="center">React Runner</h3> <!-- EDIT -->
   <p align="center">
-    React 2D game is a 2D game built in React<!-- EDIT -->
+    React Runner is an AI-powered 2D game built using React.js, Node.js, and Tensorflow.js<!-- EDIT -->
   </p>
   <!-- EDIT: Head over to https://shields.io/ to generate some beautiful shields! -->
 </p>

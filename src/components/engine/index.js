@@ -32,7 +32,7 @@ function CreateEngine(setState) {
   this.jump = false;
   this.direction = 'up';
   this.position = 0;
-  this.max = this.settings.tile * 100; // max jump height
+  this.max = this.settings.tile * 80; // max jump height
   this.blocks = BLOCKS.map(b => (b * this.settings.tile));
   this.isOpen = false;
 
@@ -225,10 +225,9 @@ export default function Engine() {
         className={styles.container}
       >
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-          {`${gameState.score}` > 0 ? `Your score is ${gameState.score}. Press space or say 'UP' to try again!` : "Press space or say 'UP' to start the game"}
-
-            </Modal>
-        <span>{gameState.score}</span>
+          {`${gameState.score}` > 0 ? `Your score is ${gameState.score}! Try again? Press space or say 'up'` : "Say 'up' or press space to jump"}
+        </Modal>
+        <span className={styles.score}>{gameState.score}</span>
         <div
           className={styles.stage}
           style={{

@@ -26,7 +26,7 @@ recognizer
     {
       includeSpectrogram: true,
       suppressionTimeMillis,
-      probabilityThreshold: 0.8
+      probabilityThreshold: 0.9
     }
   )
   .then(() => {
