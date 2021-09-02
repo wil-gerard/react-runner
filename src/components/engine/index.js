@@ -5,7 +5,7 @@ import { initSpeechRecognizer } from '../../speechCommand';
 import Modal from '../modal';
 
 
-const BLOCKS = [500, 1000, 1500];
+const BLOCKS = [ 1000, 1500, 2000];
 
 const charWidth = 100;
 const charHeight = 100;
@@ -24,7 +24,7 @@ if ( localStorage ) highscore = localStorage.highscore ? parseInt(localStorage.h
 
 function CreateEngine(setState) {
   this.settings = {
-    tile: 5, // width of one tile
+    tile: 2, // width of one tile
   };
 
   // current stage position
@@ -34,7 +34,7 @@ function CreateEngine(setState) {
   this.jump = false;
   this.direction = 'up';
   this.position = 0;
-  this.max = this.settings.tile * 80; // max jump height
+  this.max = this.settings.tile * 190; // max jump height
   this.blocks = BLOCKS.map(b => (b * this.settings.tile));
   this.isOpen = false;
 
