@@ -1,24 +1,9 @@
-<!--
-Welcome to this README template!
-
-To help you navigate, in any section you want to edit, I've put a comment written EDIT.
-
-Have fun!
--->
-
 <p align="center">
-  <h3 align="center">React Runner</h3> <!-- EDIT -->
-  <p align="center">
-    React Runner is an AI-powered 2D game built using React.js, Node.js, and Tensorflow.js<!-- EDIT -->
-  </p>
-  <!-- EDIT: Head over to https://shields.io/ to generate some beautiful shields! -->
+  <h3 align="center">react runner</h3>
 </p>
-
-<!-- EDIT: TABLE OF CONTENTS -->
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -28,27 +13,27 @@ Have fun!
   - [Run App](#run-app)
   - [Preview](#preview)
 
-<!-- EDIT: ABOUT THE PROJECT -->
-
 ## About The Project
 
-The absolute coolest readme template around! <!-- EDIT -->
+react runner is an AI-powered 2D game built using React.js, Node.js, and Tensorflow.js. The player jumps over blocks to score points using the space key or voice commands. This project was inspired by the hidden Chrome browser dino game chrome://dino/
+
+The developers:
+* [William Gerard](https://github.com/wil-gerard)
+* [Dan Anderson](https://github.com/DanCAnderson)
 
 ### Built With
 
-<!-- EDIT -->
-- Frontend
-  - HTML, SCSS, React, Material UI
-- Backend
-  - Node.js, Tensorflow.js
-- Tests
-  - [Library](https://github.com/TGlide/README-TEMPLATE/)
-- Styling
-  - [Library](https://github.com/TGlide/README-TEMPLATE/)
+- React.js
+- Node.js
+- Tensorflow.js
+- SCSS
 
 ## Getting Started
 
-<!-- EDIT -->
+To get a local copy up and running follow these simple steps.
+
+## Getting Started
+
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
