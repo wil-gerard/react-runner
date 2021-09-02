@@ -48,10 +48,14 @@ git clone https://github.com/wil-gerard/react-runner.git
 #### 2. Install dependencies
 
 yarn install
+- or -
+npm install
 
 ### Run App
 
 yarn start
+- or -
+npm start
 
 ### Preview
 
