@@ -60,6 +60,7 @@
 .score {
   font-size: $font-size2;
   color: $light-blue;
+  font-weight: $not-bold;
 }
 
 .highscore {
@@ -70,4 +71,5 @@
   color: $light-blue;
   border: 0;
   padding: 20px;
+  font-weight: $not-bold;
 }

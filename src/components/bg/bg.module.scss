@@ -4,13 +4,40 @@
     display: flex;
     align-items: center;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 4vh auto;
     border-bottom: 2px solid #f2f2f2;
     flex-direction: column;
 }
 
 h1 {
     font-size: $font-size2;
-    margin: 10vh, 5vw;
+    font-weight: $bold;
+    margin-bottom: 4vh;
 }
 
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: #afc5d3;
+    padding: 10px;
+    max-width: 180px;
+    border: 0;
+    border-radius: $border-sizing;
+    position: absolute;
+    margin: 2vh auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.about:hover {
+  background-color: $blue;
+  cursor: pointer;
+}
+
+h2 {
+    font-size: $font-size1;
+    font-weight: $bold;
+}

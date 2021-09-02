@@ -8,9 +8,15 @@ $yellow: #F0E100;
 $border-sizing: 20px;
 $font-size1: 20px;
 $font-size2: 60px;
+$bold: 700;
+$not-bold: 400;
 
 
 body {
   font-family: "Inter";
+  margin: 0;
+}
+
+* {
   margin: 0;
 }

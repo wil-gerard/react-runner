@@ -240,7 +240,7 @@ export default function Engine() {
           <span className={styles.score}>
             {gameState.score}
           </span>
-            {`${highscore}` <= 0 ? null : <span className={styles.highscore}> Highscore: {`${highscore}`}</span>} 
+            {`${highscore}` <= 0 ? null : <span className={styles.highscore}> High Score: {`${highscore}`}</span>} 
         </span>
         <div
           className={styles.stage}
