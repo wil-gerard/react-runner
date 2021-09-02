@@ -56,6 +56,3 @@ yarn start
 ### Preview
 
 You can check out a live preview at: [https://react-runner.netlify.app/](https://react-runner.netlify.app/)
-
-
-
