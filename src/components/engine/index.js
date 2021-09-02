@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './engine.module.scss';
-import { useEvent, useSpeech } from '../../hooks';
+import { useEvent } from '../../hooks';
 import { initSpeechRecognizer } from '../../speechCommand';
 import Modal from '../modal';
 
@@ -19,7 +19,8 @@ const blockSpacing = 500;
 // 2 is twice the speed
 // 1 is the same speed
 const JUMP_VELOCITY = 1.4;
-let highscore = 0
+let highscore = 0;
+if ( localStorage ) highscore = localStorage.highscore ? parseInt(localStorage.highscore) : 0;
 
 function CreateEngine(setState) {
   this.settings = {
@@ -216,12 +217,13 @@ export default function Engine() {
 
       if (gameState.score > highscore) {
         highscore = gameState.score
+        if ( localStorage ) localStorage.highscore = highscore;
         console.log(`${highscore} New highscore!`)
       }   
     }
 
     
-  });
+  }, [start, gameState.status, gameState.score, started]);
 
 
   return (
