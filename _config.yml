@@ -1,4 +1,3 @@
 # Site settings
-title: react runner
-description: react runner is an AI-powered 2D game built using React.js, Node.js, and Tensorflow.js
+
 theme: jekyll-theme-minimal
