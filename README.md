@@ -1,12 +1,3 @@
-## Table of Contents
-
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
-- [Deployment](#deployment)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Preview](#preview)
-
 ## About The Project
 
 react runner is an AI-powered 2D game built using React.js, Node.js, and Tensorflow.js. The player jumps over blocks to score points using the space key or voice commands. This project was inspired by the hidden Chrome browser dino game [chrome://dino/](chrome://dino/)
