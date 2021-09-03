@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">react runner</h1>
+  <h2 align="center">react runner</h2>
 </p>
 
 ## Table of Contents
