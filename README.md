@@ -34,15 +34,15 @@ The developers:
 
 #### 1. Clone the repo
 
-git clone https://github.com/wil-gerard/react-runner.git
+`git clone https://github.com/wil-gerard/react-runner.git`
 
 #### 2. Install dependencies
 
-yarn install or npm install
+`yarn install or npm install`
 
 #### 3. Run App
 
-yarn start or npm start
+`yarn start` or `npm start`
 
 ## Preview
 
