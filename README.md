@@ -35,6 +35,8 @@ The developers:
 
 ## Deployment
 
+### Prerequisites
+
 - VS Code or any similar IDE supporting JavaScript ES6
 - Node.js 14 or higher
 - NPM 7 or higher
