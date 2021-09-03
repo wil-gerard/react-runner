@@ -33,7 +33,7 @@ The developers:
 - Tensorflow.js
 - SCSS
 
-## Prerequisites
+## Deployment
 
 - VS Code or any similar IDE supporting JavaScript ES6
 - Node.js 14 or higher
