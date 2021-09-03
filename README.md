@@ -1,6 +1,4 @@
-<p align="center">
-  <h1>react runner</h1>
-</p>
+# react runner
 
 ## Table of Contents
 
