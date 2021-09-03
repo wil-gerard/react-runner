@@ -1,6 +1,6 @@
-<header align="center">
+<p align="center">
   <h1>react runner</h1>
-</header>
+</p>
 
 ## Table of Contents
 
