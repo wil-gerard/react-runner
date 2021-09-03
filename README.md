@@ -57,4 +57,6 @@ yarn start or npm start
 
 ![screenshot](https://user-images.githubusercontent.com/74286884/131931695-e91d8e2f-89bf-4f24-ab8b-d995fd079d69.png)
 
+![preview video[(../assets/docs/preview-video.mp4
+
 You can check out a live preview at: [https://react-runner.netlify.app/](https://react-runner.netlify.app/)
