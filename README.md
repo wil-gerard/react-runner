@@ -55,4 +55,6 @@ yarn start or npm start
 
 ### Preview
 
+![Preview ](https://wil-gerard.github.io/react-runner/docs/assets/sreenshot.png)
+
 You can check out a live preview at: [https://react-runner.netlify.app/](https://react-runner.netlify.app/)
