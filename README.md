@@ -6,12 +6,10 @@
 
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
-- [Getting Started](#getting-started)
+- [Deployment](#deployment)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-  - [Run App](#run-app)
-  - [Preview](#preview)
+- [Preview](#preview)
 
 ## About The Project
 
