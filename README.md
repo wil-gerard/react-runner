@@ -53,7 +53,7 @@ yarn install or npm install
 
 yarn start or npm start
 
-### Preview
+## Preview
 
 ![gif-preview](https://user-images.githubusercontent.com/74286884/131932092-846d76a1-c68c-49a1-979e-d406bd25c6dd.gif)
 
