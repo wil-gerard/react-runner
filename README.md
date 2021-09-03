@@ -1,4 +1,6 @@
-<title>react runner</title>
+<head>
+  <title>react runner</title>
+</head>
 
 ## About The Project
 
