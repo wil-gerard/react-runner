@@ -26,14 +26,14 @@ The developers:
 - Users can control the character using voice commands
 - A local highscore system
 
-### Built With
+## Built With
 
 - React.js
 - Node.js
 - Tensorflow.js
 - SCSS
 
-### Prerequisites
+## Prerequisites
 
 - VS Code or any similar IDE supporting JavaScript ES6
 - Node.js 14 or higher
@@ -49,7 +49,7 @@ git clone https://github.com/wil-gerard/react-runner.git
 
 yarn install or npm install
 
-### Run App
+#### 3. Run App
 
 yarn start or npm start
 
