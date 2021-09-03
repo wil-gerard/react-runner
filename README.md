@@ -38,7 +38,7 @@ The developers:
 
 #### 2. Install dependencies
 
-`yarn install or npm install`
+`yarn install` or `npm install`
 
 #### 3. Run App
 
